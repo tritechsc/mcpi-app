@@ -12,3 +12,9 @@ StevePi
 
 IceBowl
 496365426f776c
+
+
+original code
+hexdump -ve '1/1 "%.2X"' file.bin | \
+sed "s/<pattern>/<replacement>/g" | \
+xxd -r -p > file.bin.patched
