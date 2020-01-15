@@ -1,0 +1,3 @@
+Install the following to use the desktop bash script to start minecraft-pi
+using a Raspberry Pi 4
+apt install libgles2-mesa-dev
