@@ -14,7 +14,7 @@ def resolv():
 	global m5
 	m2="rm -f /etc/resolv.conf"
 	m3="touch /etc/resolv.conf"
-	m4="echo nameserver 192.168.7.1 >> /etc/rosolv.conf"
+	m4="echo nameserver 192.168.7.1 > /etc/resolv.conf"
 	m5="--------------------------------"
 	print(m2)
 	print(m3)
