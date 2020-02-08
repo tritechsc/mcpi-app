@@ -1,3 +1,5 @@
+# Code written by NoahMcGee  edited by Coleman (added 8.8.8.8)
+
 import os
 import socket
 bash=os.system
@@ -15,11 +17,13 @@ def resolv():
 	m2="rm -f /etc/resolv.conf"
 	m3="touch /etc/resolv.conf"
 	m4="echo nameserver 192.168.7.1 > /etc/resolv.conf"
-	m5="--------------------------------"
+	m5="echo nameserver 8.8.8.8 >> /etc/resolv.conf"
+	m6="--------------------------------"
 	print(m2)
 	print(m3)
 	print(m4)
 	print(m5)
+	print(m6)
 def execute():
 	a = input ("Does everything above look correct? (Y/N): ")
 	if (a == "Y" or a == "y"):
@@ -29,14 +33,15 @@ def execute():
 			bash(m2)
 			bash(m3)
 			bash(m4)
+			bash(m5)
 		elif (a == "N" or a == "n"):
-			print(m5)
+			print(m6)
 			print("Exiting ip script no changes made.")
 			exit()
 		else:
 			execute()
 	elif (a == "N" or a == "n"):
-		print(m5)
+		print(m6)
 		print("Make sure your hostname is changed to the ip you wish...\nExiting ip script no changes made.")
 		exit()
 	else:
